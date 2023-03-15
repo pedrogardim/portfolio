@@ -9,16 +9,19 @@
 }
 
 html {
-  overflow-x: hidden;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
-.App {
-  min-height: 100vh;
-  overflow-x: hidden;
+.portfolio-content {
+  height: 100vh;
 }
 
-.pfSection {
+.portfolio-section {
   height: 50vh;
   display: flex;
   flex-direction: column;
+  scroll-snap-align: start;
 }

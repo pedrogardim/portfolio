@@ -15,35 +15,32 @@ import { getWindowsText } from './utils/textUtils';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const { currentSection, scrollToSection, onWheel } = useScrollController();
+  const { currentSection, scrollToSection } = useScrollController();
   const texts = useMemo(() => getWindowsText(currentSection), [currentSection]);
 
   return (
-    <Container
-      onWheel={onWheel}
-      onClick={() => scrollToSection(currentSection + 1)}
-    >
+    <Container className="portfolio-content">
       <Header />
-      <Container className="pfSection">
+      <Container className="portfolio-section">
         <BasicProfile scrollToSection={scrollToSection} />
       </Container>
-      <Container className="pfSection">
+      <Container className="portfolio-section">
         <Window>
           <Code text={texts[0]} />
         </Window>
       </Container>
-      <Container className="pfSection">
+      <Container className="portfolio-section">
         <ProjectGrid />
       </Container>
-      <Container className="pfSection">
+      <Container className="portfolio-section">
         <BasicProfile scrollToSection={scrollToSection} />
       </Container>
-      <Container className="pfSection">
+      <Container className="portfolio-section">
         <Window>
           <Code text={texts[1]} />
         </Window>
       </Container>
-      <Container className="pfSection">
+      <Container className="portfolio-section">
         <ProjectGrid />
       </Container>
     </Container>
