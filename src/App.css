@@ -20,7 +20,7 @@ html {
 }
 
 .portfolio-section {
-  height: 50vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   scroll-snap-align: start;

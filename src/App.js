@@ -7,10 +7,11 @@ import Code from './components/Code/Code';
 import BasicProfile from './components/BasicProfile/BasicProfile';
 import Window from './components/Window/Window';
 import Header from './components/Header/Header';
-import ProjectGrid from './components/ProjectGrid/ProjectGrid';
+import Grid from './components/Grid/Grid';
 
 import useScrollController from './hooks/useScrollController';
 import { getWindowsText } from './utils/textUtils';
+import { projects, education } from './data';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,25 +24,19 @@ function App() {
       <Header />
       <Container className="portfolio-section">
         <BasicProfile scrollToSection={scrollToSection} />
-      </Container>
-      <Container className="portfolio-section">
         <Window>
           <Code text={texts[0]} />
         </Window>
       </Container>
       <Container className="portfolio-section">
-        <ProjectGrid />
+        <h1>Projects</h1>
+        <Grid data={projects} />
+        <h1>Education</h1>
+
+        <Grid data={education} />
       </Container>
       <Container className="portfolio-section">
         <BasicProfile scrollToSection={scrollToSection} />
-      </Container>
-      <Container className="portfolio-section">
-        <Window>
-          <Code text={texts[1]} />
-        </Window>
-      </Container>
-      <Container className="portfolio-section">
-        <ProjectGrid />
       </Container>
     </Container>
   );
