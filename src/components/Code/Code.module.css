@@ -1,0 +1,57 @@
+:root {
+  --max-words: 45;
+}
+
+.codeContainer {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  overflow-y: overlay;
+  padding: 16px;
+}
+
+.codeText {
+  text-align: left;
+  color: white;
+  white-space: break-spaces;
+  font-family: IMBPlexMono;
+  font-size: 24px;
+}
+
+.codeText > span {
+  white-space: break-spaces;
+}
+.titleCursor {
+  width: 4px;
+  align-self: center;
+  background: white;
+  height: calc(100vw / 80);
+  margin-left: 4px;
+  animation: blink 1s infinite;
+  display: inline-block;
+}
+
+.hiddenCode {
+  transform: translate(0px, 100vh);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .codeText {
+    font-size: 16px;
+  }
+}

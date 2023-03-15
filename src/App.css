@@ -1,0 +1,24 @@
+@font-face {
+  font-family: IMBPlexMono;
+  src: url(./assets/IBMPlexMono.ttf);
+}
+
+@font-face {
+  font-family: JosefinSans;
+  src: url(./assets/JosefinSans.ttf);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.App {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.pfSection {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+}

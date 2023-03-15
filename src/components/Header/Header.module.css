@@ -1,0 +1,29 @@
+.header {
+  height: 128px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  padding-right: 32px;
+}
+
+.avatarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 32px;
+}
+
+.avatar {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.cvText {
+  font-family: IMBPlexMono;
+  color: #777;
+  font-size: 20px;
+}
