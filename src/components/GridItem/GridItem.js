@@ -1,11 +1,11 @@
 import styles from './GridItem.module.css';
 
-const GridItem = ({ item, index }) => {
+const GridItem = ({ item }) => {
   return (
     <div className={styles.gridItem}>
       <img
         className={styles.gridItemImage}
-        src={`../assets/images/projects/${index}.png`}
+        src={item.picture}
         alt={''}
         onError={(event) => (event.target.style.display = 'none')}
       />

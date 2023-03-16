@@ -1,24 +1,20 @@
-export const intro = `const pedroGardim = {
-    stack: {
-        language: 'javascript',
-        frontEnd: ['react','CSS','HTML','jQuery'],
-        backEnd: ['nodeJS','express','mongoDB'],
-        mobile: ['reactNative'],
-    },
-    languages: ['English', 'Portuguese', 'Spanish'],
-    livesIn: 'Valencia, Spain',
-}`;
+export const intro = `const i = {};
+i.am = ['Pedro Gardim','Web developer'];
+i.code = ['React','NodeJS','CSS','Express','MongoDB'];
+i.workWith = ['Bitbucket','Github','Jira','Agile','Scrum'];
+i.aspireTo = 'Work on a dynamic company with a vibrant team!';
+i.speak = ['English','Spanish','Portuguese'];
+i.love = ['Challenges','Family','Music','Videogames'];
+i.liveIn = 'Valencia, Spain'`;
 
-export const myProjects = `pedroGardim.projects = {
-    currentlyWorkingOn: bless,
-    peronalProjects: [modulab, musabeat, leukos],
-    experiments: [kat, webDaw, metrono, pumblr]
-    moreStuffOn: gitHub
-}
+export const myProjects = `i.amWorkingOn: ['VirtualCase / Bless'],
+i.alsoCreated: ['Modulab', 'Musabeat', 'Leukos'],
+i.haveMoreStuffOnMy: gitHub,
+
 pedroGardim.experience = [
     virtualCase:{
-        ocupation: 'Full stack mobile developer (React Native)',
-        period: [new Date('09-01-2022'), new Date()]
+        ocupation: ['Co-founder', 'Full stack developer (React Native)'],
+        period: [new Date('09-01-2022'), 'Now']
     }
 ]`;
 

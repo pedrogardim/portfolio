@@ -20,8 +20,34 @@ html {
 }
 
 .portfolio-section {
-  height: 50vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   scroll-snap-align: start;
+  padding-top: 70px;
+}
+
+.portfolio-section-header {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+}
+
+.portfolio-section-header > span {
+  font-family: JosefinSans;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-right: 8px;
+}
+
+.scrollDownLottie {
+  position: absolute;
+  filter: brightness(99);
+  height: 128px;
+  width: 128px;
+  bottom: 0;
+  margin-left: -64px;
+  left: 50%;
 }

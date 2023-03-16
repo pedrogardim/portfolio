@@ -1,19 +1,6 @@
 import { colorMap, colorPalette } from '../data';
-import { intro, myProjects } from '../data/texts';
 
 import Word from '../components/Word/Word';
-
-export const getWindowsText = (section) => {
-  const textMapping = [
-    [intro, myProjects],
-    [myProjects, intro],
-    [intro, myProjects],
-    [myProjects, intro],
-    [intro, myProjects],
-    [myProjects, intro],
-  ];
-  return textMapping[section];
-};
 
 export const createText = (text) => {
   let isString = false;

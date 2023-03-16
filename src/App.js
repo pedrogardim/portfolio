@@ -2,46 +2,69 @@ import { useState, useEffect, useMemo } from 'react';
 import './App.css';
 
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import Fade from 'react-bootstrap/Fade';
 
 import Code from './components/Code/Code';
 import BasicProfile from './components/BasicProfile/BasicProfile';
 import Window from './components/Window/Window';
 import Header from './components/Header/Header';
-import ProjectGrid from './components/ProjectGrid/ProjectGrid';
+import Grid from './components/Grid/Grid';
+
+import Icon from '@mdi/react';
+import { mdiGithub } from '@mdi/js';
+
+import Lottie from 'react-lottie-player';
+
+import scrolldown from './assets/animations/scrolldown.json';
 
 import useScrollController from './hooks/useScrollController';
-import { getWindowsText } from './utils/textUtils';
+
+import { projects } from './data';
+import { intro } from './data/texts';
+
+import config from './config';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const { currentSection, scrollToSection } = useScrollController();
-  const texts = useMemo(() => getWindowsText(currentSection), [currentSection]);
+  const { scrollToSection, showScrollIndicator } = useScrollController();
 
   return (
     <Container className="portfolio-content">
       <Header />
       <Container className="portfolio-section">
         <BasicProfile scrollToSection={scrollToSection} />
-      </Container>
-      <Container className="portfolio-section">
         <Window>
-          <Code text={texts[0]} />
+          <Code text={intro} />
         </Window>
+        <Fade
+          unmountOnExit
+          in={showScrollIndicator}
+          timeout={500}
+        >
+          <Lottie
+            play
+            loop
+            animationData={scrolldown}
+            className="scrollDownLottie"
+          />
+        </Fade>
       </Container>
       <Container className="portfolio-section">
-        <ProjectGrid />
-      </Container>
-      <Container className="portfolio-section">
-        <BasicProfile scrollToSection={scrollToSection} />
-      </Container>
-      <Container className="portfolio-section">
-        <Window>
-          <Code text={texts[1]} />
-        </Window>
-      </Container>
-      <Container className="portfolio-section">
-        <ProjectGrid />
+        <div className="portfolio-section-header">
+          <span>Projects</span>
+          <Button
+            variant="outline-primary"
+            onClick={() => window.open(config.gitHubUrl, '_blank').focus()}
+          >
+            <Icon
+              path={mdiGithub}
+              size={1}
+            />
+          </Button>
+        </div>
+        <Grid data={projects} />
       </Container>
     </Container>
   );
