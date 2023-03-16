@@ -5,7 +5,10 @@ const Window = (props) => {
     <div className={styles.windowContainer}>
       <div className={styles.windowHeader}>
         {['#FF605C', '#FFBD44', '#00CA4E'].map((e) => (
-          <div style={{ backgroundColor: e }}></div>
+          <div
+            style={{ backgroundColor: e }}
+            key={e}
+          ></div>
         ))}
       </div>
       {props.children}

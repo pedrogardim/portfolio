@@ -3,6 +3,7 @@ import './App.css';
 
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import Fade from 'react-bootstrap/Fade';
 
 import Code from './components/Code/Code';
 import BasicProfile from './components/BasicProfile/BasicProfile';
@@ -13,17 +14,21 @@ import Grid from './components/Grid/Grid';
 import Icon from '@mdi/react';
 import { mdiGithub } from '@mdi/js';
 
+import Lottie from 'react-lottie-player';
+
+import scrolldown from './assets/animations/scrolldown.json';
+
 import useScrollController from './hooks/useScrollController';
-import { getWindowsText } from './utils/textUtils';
-import { projects, education } from './data';
+
+import { projects } from './data';
+import { intro } from './data/texts';
 
 import config from './config';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const { currentSection, scrollToSection } = useScrollController();
-  const texts = useMemo(() => getWindowsText(currentSection), [currentSection]);
+  const { scrollToSection, showScrollIndicator } = useScrollController();
 
   return (
     <Container className="portfolio-content">
@@ -31,8 +36,20 @@ function App() {
       <Container className="portfolio-section">
         <BasicProfile scrollToSection={scrollToSection} />
         <Window>
-          <Code text={texts[0]} />
+          <Code text={intro} />
         </Window>
+        <Fade
+          unmountOnExit
+          in={showScrollIndicator}
+          timeout={500}
+        >
+          <Lottie
+            play
+            loop
+            animationData={scrolldown}
+            className="scrollDownLottie"
+          />
+        </Fade>
       </Container>
       <Container className="portfolio-section">
         <div className="portfolio-section-header">

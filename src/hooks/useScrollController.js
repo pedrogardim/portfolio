@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 
 const useScrollController = () => {
   const [currentSection, setCurrentSection] = useState(0);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(false);
 
   const scrollToSection = (sessionIndex) => {
-    console.log(sessionIndex);
     window.scrollTo({
       top: sessionIndex * (window.innerHeight / 2),
       behavior: 'smooth',
@@ -12,10 +12,16 @@ const useScrollController = () => {
   };
 
   useEffect(() => {
+    setShowScrollIndicator(false);
+  }, [currentSection]);
+
+  useEffect(() => {
     const handleScroll = (event) => {
       const section = Math.floor(window.scrollY / (window.innerHeight / 2));
       setCurrentSection(section);
     };
+
+    setTimeout(() => setShowScrollIndicator(true), 5000);
 
     window.addEventListener('scroll', handleScroll);
 
@@ -24,7 +30,7 @@ const useScrollController = () => {
     };
   }, []);
 
-  return { currentSection, scrollToSection };
+  return { scrollToSection, showScrollIndicator };
 };
 
 export default useScrollController;
