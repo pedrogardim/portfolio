@@ -23,5 +23,21 @@ html {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   scroll-snap-align: start;
+  padding-top: 70px;
+}
+
+.portfolio-section-header {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+}
+
+.portfolio-section-header > span {
+  font-family: JosefinSans;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-right: 8px;
 }

@@ -1,8 +1,8 @@
 .gridContainer {
   border-radius: 8px;
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 8px 0px;
 }

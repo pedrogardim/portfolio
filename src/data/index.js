@@ -42,9 +42,9 @@ Object.entries(wordColorMap).map((color) =>
 
 export const projects = [
   { title: 'Bless', picture: '../assets/images/projects/bless.png' },
-  { title: 'Leukos', picture: '../assets/images/projects/leukos.png' },
   { title: 'Modulab', picture: '../assets/images/projects/modulab.png' },
   { title: 'Musabeat', picture: '../assets/images/projects/musabeat.png' },
+  { title: 'Leukos', picture: '../assets/images/projects/leukos.png' },
   { title: 'Petr', picture: '../assets/images/projects/petr.png' },
   { title: 'Web DAW', picture: '../assets/images/projects/webdaw.png' },
   { title: 'Metrono', picture: '../assets/images/projects/metrono.png' },
