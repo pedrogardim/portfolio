@@ -23,6 +23,7 @@
 .profilePic {
   width: 192px;
   height: 192px;
+  object-fit: cover;
 }
 
 .nameTitle {
