@@ -41,14 +41,53 @@ Object.entries(wordColorMap).map((color) =>
 );
 
 export const projects = [
-  { title: 'Bless', picture: '../assets/images/projects/bless.png' },
-  { title: 'Modulab', picture: '../assets/images/projects/modulab.png' },
-  { title: 'Musabeat', picture: '../assets/images/projects/musabeat.png' },
-  { title: 'Leukos', picture: '../assets/images/projects/leukos.png' },
-  { title: 'Petr', picture: '../assets/images/projects/petr.png' },
-  { title: 'Web DAW', picture: '../assets/images/projects/webdaw.png' },
-  { title: 'Metrono', picture: '../assets/images/projects/metrono.png' },
-  { title: 'Pumblr', picture: '../assets/images/projects/pumblr.png' },
+  {
+    title: 'Bless',
+    picture: '../assets/images/projects/bless.png',
+    description:
+      'A dating app intended for Christians. It has a card swiping system, which matches users based on their preferences. Also features a complete chat and videocall system',
+  },
+  {
+    title: 'Modulab',
+    picture: '../assets/images/projects/modulab.png',
+    url: 'https://modulab-ee0e0.web.app',
+    description:
+      'Simulation of modular syntesis on the web. Combine different audio processing modules to create unique sounds.',
+  },
+  {
+    title: 'Musabeat',
+    picture: '../assets/images/projects/musabeat.png',
+    description:
+      'A collaborative music creation web app, which combines most features of a DAW (Digital Audio Workstation), with social network aspects',
+    url: 'https://github.com/pedrogardim/musabeat',
+  },
+  {
+    title: 'Leukos',
+    picture: '../assets/images/projects/leukos.png',
+    description:
+      'Songbook system for liturgical music. The mobile app features chord transpose and song playback, while the desktop app will project the lyrics',
+  },
+  {
+    title: 'Petr',
+    picture: '../assets/images/projects/petr.png',
+    description: 'A virtual pet on the web',
+  },
+  {
+    title: 'Web DAW',
+    picture: '../assets/images/projects/webdaw.png',
+    description: 'A ',
+    url: 'https://github.com/pedrogardim/daw_prototype',
+  },
+  {
+    title: 'Metrono',
+    picture: '../assets/images/projects/metrono.png',
+    description: 'Web metronome with a minimalist design',
+  },
+  {
+    title: 'Pumblr',
+    picture: '../assets/images/projects/pumblr.png',
+    description: 'Clone of the classic game using JS',
+  },
 ];
 
 export const education = [

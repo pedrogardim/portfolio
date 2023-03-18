@@ -1,8 +1,11 @@
 import styles from './GridItem.module.css';
 
-const GridItem = ({ item }) => {
+const GridItem = ({ item, onSelect }) => {
   return (
-    <div className={styles.gridItem}>
+    <button
+      className={styles.gridItem}
+      onClick={onSelect}
+    >
       <img
         className={styles.gridItemImage}
         src={item.picture}
@@ -11,7 +14,7 @@ const GridItem = ({ item }) => {
       />
       <span className={styles.gridItemTitle}>{item.title}</span>
       <div className={styles.gridItemOverlay}></div>
-    </div>
+    </button>
   );
 };
 

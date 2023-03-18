@@ -2,7 +2,7 @@ import styles from './Grid.module.css';
 
 import GridItem from '../GridItem/GridItem';
 
-const Grid = ({ data }) => {
+const Grid = ({ data, onSelect }) => {
   return (
     <div className={styles.gridContainer}>
       {data.map((item, index) => (
@@ -10,6 +10,7 @@ const Grid = ({ data }) => {
           item={item}
           index={index}
           key={item.title}
+          onSelect={() => onSelect(index)}
         />
       ))}
     </div>

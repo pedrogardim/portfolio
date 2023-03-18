@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState } from 'react';
 import './App.css';
 
 import Container from 'react-bootstrap/Container';
@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Fade from 'react-bootstrap/Fade';
 
 import Code from './components/Code/Code';
+import ProjectModal from './components/ProjectModal/ProjectModal';
 import BasicProfile from './components/BasicProfile/BasicProfile';
 import Window from './components/Window/Window';
 import Header from './components/Header/Header';
@@ -28,6 +29,7 @@ import config from './config';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const [openedProject, setOpenedProject] = useState(null);
   const { scrollToSection, showScrollIndicator } = useScrollController();
 
   return (
@@ -64,7 +66,14 @@ function App() {
             />
           </Button>
         </div>
-        <Grid data={projects} />
+        <Grid
+          data={projects}
+          onSelect={setOpenedProject}
+        />
+        <ProjectModal
+          data={openedProject !== null && projects[openedProject]}
+          onClose={() => setOpenedProject(null)}
+        />
       </Container>
     </Container>
   );
