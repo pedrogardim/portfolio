@@ -46,6 +46,7 @@ export const projects = [
     picture: '../assets/images/projects/bless.png',
     description:
       'A dating app intended for Christians. It has a card swiping system, which matches users based on their preferences. Also features a complete chat and videocall system',
+    url: 'https://play.google.com/store/apps/details?id=io.virtualcase.bless',
   },
   {
     title: 'Modulab',
@@ -84,9 +85,10 @@ export const projects = [
     description: 'Web metronome with a minimalist design',
   },
   {
-    title: 'Pumblr',
+    title: 'Plumb',
     picture: '../assets/images/projects/pumblr.png',
     description: 'Clone of the classic game using JS',
+    url: 'https://github.com/pedrogardim/plumb',
   },
 ];
 
