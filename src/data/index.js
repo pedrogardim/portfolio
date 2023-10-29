@@ -67,8 +67,7 @@ export const projects = [
     title: "GameboyJS",
     picture:
       "https://user-images.githubusercontent.com/81443264/269696469-3289bf5a-41e7-4823-9bd7-fe8c459ee238.gif",
-    description:
-      "Songbook system for liturgical music. The mobile app features chord transpose and song playback, while the desktop app will project the lyrics",
+    description: `Recrea la experiencia nostálgica del GameBoy clásico directamente en tu navegador. Construido con HTML, CSS y JavaScript, este proyecto no solo emula el aspecto del dispositivo, sino que también ofrece una versión jugable del clásico juego Snake 🐍.`,
     url: "https://github.com/pedrogardim/gameboyjs",
   },
   {
