@@ -21,8 +21,8 @@
 }
 
 .profilePic {
-  width: 192px;
-  height: 192px;
+  width: 16em;
+  height: 16em;
   object-fit: cover;
 }
 
